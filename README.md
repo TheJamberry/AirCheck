@@ -149,3 +149,9 @@ sudo systemctl restart aircheck
 4. `scipy.signal.correlate` computes the normalised cross-correlation between the two channels.
 5. The peak of the correlation function gives a similarity score [0–1] and the lag (in ms) between the two feeds.
 6. The result is mapped to one of the status codes above and printed to stdout.
+
+## Disclaimer
+
+This project was built with AI assistance by a non-programmer to solve a specific real-world need. No existing tool did what was required, so this one was created.
+
+The code has been reviewed and researched, but you should evaluate it yourself before using it in a broadcast environment.
