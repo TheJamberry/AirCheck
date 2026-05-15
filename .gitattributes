@@ -1,0 +1,10 @@
+# Force LF line endings for all text files checked out on any platform.
+# This prevents CRLF from breaking shell scripts on the Linux deployment machine.
+* text=auto eol=lf
+
+*.sh    text eol=lf
+*.py    text eol=lf
+*.yaml  text eol=lf
+*.toml  text eol=lf
+*.md    text eol=lf
+*.service text eol=lf
