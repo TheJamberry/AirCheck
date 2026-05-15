@@ -28,7 +28,7 @@ Captures two live audio inputs — an off-air FM receiver and a program feed —
 Clone the repo and run the installer:
 
 ```bash
-git clone <repo-url> /opt/aircheck
+git clone (https://github.com/TheJamberry/AirCheck.git) /opt/aircheck
 cd /opt/aircheck
 bash scripts/install.sh
 ```
