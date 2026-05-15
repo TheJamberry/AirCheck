@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aircheck"
+version = "0.1.0"
+description = "CLI broadcast confidence monitor — compares two live audio inputs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "sounddevice>=0.4.6",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+aircheck = "aircheck.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

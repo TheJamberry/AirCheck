@@ -1,0 +1,16 @@
+[Unit]
+Description=AirCheck — broadcast confidence monitor
+After=network.target sound.target
+Wants=sound.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/aircheck
+ExecStart=/opt/aircheck/.venv/bin/python -m aircheck.main --config /opt/aircheck/config.yaml
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

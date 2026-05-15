@@ -1,0 +1,28 @@
+# AirCheck configuration
+# Copy this file to config.yaml and edit for your setup.
+# config.yaml is never overwritten by git pull.
+
+# Audio device index or name — run with --list-devices to find yours
+device: 0
+
+sample_rate: 44100
+channels: 2
+
+# 0-based channel indices for the stereo input
+off_air_channel: 0    # Left  = off-air FM receiver
+program_channel: 1    # Right = program feed to transmitter
+
+# Rolling window of audio captured for each comparison
+chunk_duration: 8.0   # seconds
+
+# How often to run a comparison and print status
+check_interval: 2.0   # seconds
+
+# RMS level below which a signal is considered silence
+min_rms: 0.001
+
+# Normalised cross-correlation score [0.0–1.0] required to report MATCH
+match_threshold: 0.85
+
+# If the detected delay exceeds this value, report UNCERTAIN instead of MATCH
+max_delay_ms: 5000.0
